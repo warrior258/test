@@ -1,0 +1,396 @@
+	@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&family=Poppins:ital,wght@0,300;1,300&display=swap');
+
+	*{
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		font-family: Poppins;
+	}
+	
+		
+	.uid{
+		text-align: center;
+		background-color: #66fcf1;
+	}
+
+	.uid p{
+		font-weight: bold;
+		letter-spacing: 2px;
+		font-size: 14px;
+	}
+
+	/*This is used to hide the scroll bar and still able to scrool*/
+	body::-webkit-scrollbar{
+	 	width: 0 !important 
+	}
+
+	/*Only donw for night mode*/
+	/*Remove this in light mode*/
+	/*Removing input background colour of Chrome autocomplete*/
+	input:-webkit-autofill,
+	input:-webkit-autofill:hover, 
+	input:-webkit-autofill:focus, 
+	input:-webkit-autofill:active  {
+    -webkit-box-shadow: 0 0 0 30px inset !important;
+	}
+
+	input:-webkit-autofill{
+    -webkit-text-fill-color: white !important;
+	}
+
+
+
+	body{
+		background-color: #0b0c10;
+	}
+
+	#u-name{
+		background-color: #0b0c10;
+		color: white;
+	}
+
+	header{
+		/*width: 85%;
+		margin: auto;*/		
+		display: flex;
+
+		justify-content: space-between;
+		background-color: #0B0C10;
+		align-items: center;
+		text-align: center;
+		padding: 10px 100px;
+		color: white;
+	}
+
+	header a{
+		text-decoration: none;
+		color: #66FCF1;
+	}
+
+	.navbar ul li{
+		display: inline;
+		margin: 20px;
+		position: relative;
+		margin-left: 70px;
+	}
+
+	.navbar ul li a{
+		color: black;
+		font-weight: bold;
+		font-size: 16px;
+		letter-spacing: 2px;
+		text-decoration: none;
+		color: white;
+	}
+
+	.navbar ul li a::after{
+		content: "";
+		position: absolute;
+		background-color: #66FCF1;
+		height: 3px;
+		border-radius: 2px;
+		width: 0;
+		bottom: -4px;
+		left: -2px;
+	}
+
+	.navbar ul li a:hover::after{
+		width: 100%;
+		transition: 0.5s;
+	}
+
+
+	.head-btn a{
+		color: black;
+		font-weight: bold;
+		font-size: 15px;
+		margin: 10px;
+		background-color: #66FCF1;
+		padding: 10px 10px;
+		letter-spacing: 1px;
+		text-decoration: none;
+	}
+
+	.head-btn a:hover{
+		background-color: #0b0c10;
+		border: 2px solid #66fcf1;
+		color: #66fcf1;
+	}
+
+	/*Main css*/
+	.main{
+		width: 100%;
+		height: 100vh;
+		background-image: linear-gradient(rgb(0, 0, 0, 0.85), rgb(0, 0, 0, 0.85)),url("front.jpg");
+		background-size: cover;
+		background-position: center;
+	}
+
+	.main{
+		text-align: center;
+	}
+
+
+	.main h1{
+		font-size: 80px;
+		padding-top: 180px;
+		letter-spacing: 5px;
+		color: white;
+		padding-bottom: 50px;
+	}
+
+	.main a{
+		text-decoration: none;
+		color: black;
+		background-color: #66FCF1;
+		padding: 10px 20px;
+		font-weight: bold;
+		letter-spacing: 1px;
+	}
+
+
+	/*OUR courses css*/
+
+	.c-box a{
+		text-decoration: none;
+		background-color: #66fcf1;
+		color: black;
+		font-weight: bold;
+		padding: 10px;
+		margin-left: 20px;
+		letter-spacing: 1px;
+		padding: 5px 10px;		
+	}
+
+	.c-box a:hover{
+		background-color: black;
+		border: 2px solid #66fcf1;
+		color: #66fcf1;
+	}
+
+
+	.container{
+		padding: 10px 150px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		align-items: center;
+	}
+
+	.c-box{
+		background-color: black;
+		width: 300px;
+		height: 200px;
+		color: black;
+		border-radius: 10px;
+		margin: 15px;
+		/*box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.7);*/
+		box-shadow: 0px 10px 50px rgba(102,252,241,0.2);
+	}
+
+	.c-box h3{
+		padding: 20px 20px;
+		color: #66fcf1;
+	}
+
+	.c-box p{
+		padding-left: 20px;
+		padding-bottom: 30px;
+		color: white;
+	}
+
+
+	.course h1{
+		text-align: center;
+		letter-spacing: 2px;
+		padding-bottom: 30px;
+		padding-top: 50px;
+		font-size: 40px;
+		color: #66fcf1;
+	}
+
+
+	/*Content css*/
+	.content{		
+		display: flex;
+		padding: 100px 150px;
+		margin-top: 100px;
+		background-color: #66fcf1;
+		color: black;
+	}
+
+	.content p{
+		color: black;
+		font-weight: bold;
+	}
+
+	.left{
+		width: 600px;
+	}
+
+	.left h1{
+		font-size: 50px;
+		padding-bottom: 20px;
+	}
+
+	.right{
+		width: 500px;
+		text-align: right;
+	}
+	.right img{
+		box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.7);
+	}
+
+	/* SignIn-SignUp form css */
+	.box-s{
+		width: 300px;
+		height: 330px;
+		background-color: black;
+		text-align: center;
+		padding-top: 30px;
+		border-radius: 20px;
+		box-shadow: 0px 10px 50px rgba(102,252,241,0.4);
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 100px;
+	}
+
+	.box{
+		width: 300px;
+		height: 380px;
+		background-color: black;
+		text-align: center;
+		padding-top: 30px;
+		border-radius: 20px;
+		box-shadow: 0px 10px 50px rgba(102,252,241,0.4);
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 100px;
+	}
+
+	.box-s h3, .box h3{
+		padding-bottom: 20px;		
+		font-size: 30px;
+		color: #66fcf1;
+	}
+
+	.f-box{
+		margin-bottom: 20px;
+	}
+
+	.f-box input{
+		outline: none;
+		background: transparent;
+		width: 200px;
+		height: 40px;
+		padding-left: 10px;
+		border-radius: 10px;
+		border: none;
+		color: white;
+		border: 2px solid #66fcf1;
+	}
+
+	.btn input{
+		width: 200px;
+		height: 40px;
+		border: none;
+		background-color: #66fcf1;
+		color: black;
+		font-size: 15px;
+		letter-spacing: 1px;
+		font-weight: bold;
+		cursor: pointer;
+	}
+	.btn input:hover{
+		background-color: black;
+		border: 2px solid #66fcf1;
+		color: #66fcf1;
+	}
+
+	#togglePassword{
+		margin-left: -28px;
+		color: #66fcf1;
+	}
+
+	.SignIn{
+		padding-top: 15px;
+	}
+
+	.SignIn a{
+		color: #66fcf1;
+	}
+
+	/*Footer*/
+	.footer{
+		background-color: #0b0c10;		
+		height: 200px;
+		margin-top: 50px;
+		display: flex;
+		justify-content: space-around;
+		padding-top: 60px;
+
+	}
+
+	.footer h4{
+		color: #66fcf1;
+		font-size: 22px;
+		margin-bottom: 10px;
+		letter-spacing: 2px;
+	}
+
+	.foot1{
+		text-align: center;
+	}
+
+	.foot1 ul li{
+		color: white;
+		font-size: 16.5px;
+		margin-bottom: 10px;		
+	}
+
+	.copyright{
+		background-color:#0b0c10;
+		text-align: center;
+		color: #66FCF1;
+		padding-bottom: 50px;
+	}
+
+	/*Certificate*/
+	.certificate{
+		width: 700px;
+		height: 500px;
+		background-color: black;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 50px;
+		border-radius: 10px;
+		text-align: center;
+		color: white;	
+		box-shadow: 0px 10px 50px rgba(102,252,241,0.4);			
+	}
+
+	.certificate h1{
+		font-size: 40px;
+		padding: 20px 0;
+		color: #66fcf1;
+	}
+
+	.certificate h2{
+		color: #66fcf1;
+	}
+
+	.certificate p{
+		font-weight: bold;
+		font-size: 15px;
+		padding: 20px 0;
+	}
+
+	.certificate label{
+		font-weight: bold;
+	}
+
+
+	
+
+	/*lIGHT MODE*/
+

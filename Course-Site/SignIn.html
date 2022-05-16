@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>SIGN IN</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+	
+	<div class="uid">
+			<p>UID - 20BSC1085</p>
+	</div>
+	
+	<header>
+		<h1><a href="index.html">Courx</a></h1>
+				
+			<div class="navbar">
+					
+				<ul>
+					<li><a href="index.html">HOME</a></li>
+					<li><a href="#">ABOUT</a></li>
+					<li><a href="#">CONTACT</a></li>
+				</ul>
+			</div>
+
+			<div class="head-btn">
+				<a href="SignIn.html">SIGN IN</a>
+				<a href="SignUp.html">SIGN UP</a>
+			</div>
+
+	</header>
+	
+	<div class="box-s">
+		
+		<form id="form" action="index-copy.html">
+
+			<h3>Sign In</h3>
+			
+			<div class="f-box">
+				<input type="text" name="" id="name" placeholder="Your Name..." required>
+			</div>
+
+			<div class="f-box">
+				<input type="password" name="" id="pass" placeholder="Enter Password..." required>
+				<i class="bi bi-eye-slash" id="togglePassword" onclick="eyeCheck()"></i>
+			</div>
+
+			
+
+			<div class="btn">
+				<input type="submit" name="" onclick="checkCred()" value="Sign In">
+			</div>
+
+		</form>
+
+		<div class="SignIn">
+			<a href="SignUp.html">SIGN UP</a>
+		</div>
+
+	</div>
+
+	<div class="footer">
+		
+		<div class="foot1">	
+			<h4>ABOUT</h4>		
+			<ul>
+				<li>News</li>
+				<li>Business</li>
+				<li>Careers</li>
+			</ul>
+		</div>
+
+		
+		<div class="foot1">
+			<h4>CONNECT</h4>			
+			<ul>
+				<li>Contact Us</li>
+				<li>Help Center</li>
+				<li>Media Kit</li>
+			</ul>
+		</div>
+
+		
+		<div class="foot1">	
+			<h4>LEGAL</h4>		
+			<ul>
+				<li>Privacy Policy</li>
+				<li>Accessibility</li>
+				<li>Terms & Conditions</li>
+			</ul>
+		</div>
+
+		<div class="foot1">
+			<h4>DOWNLOAD NOW</h4>
+			<img src="download.svg" width="130px" style="padding-top: 10px; padding-left: 30px;">
+			
+		</div>		
+
+	</div>
+
+	<div class="copyright">
+		<p>&#169; Copyright reserved 2022</p>
+	</div>
+
+
+
+
+
+	<script>
+
+		function checkCred(){
+
+			var message = document.getElementById("p1");
+
+			var name = document.getElementById("name").value;
+			var pass1 = document.getElementById("pass").value;
+
+			var user = localStorage.getItem("Username");
+			var pass = localStorage.getItem("Password");
+
+			if(name == user && pass1 == pass){
+				form.submit();
+			}
+			else if(name != user && pass1 != pass){
+				alert("User doesn't exisit.");
+
+				document.getElementById("name").style.border="1px solid red";
+				document.getElementById("pass").style.border="1px solid red";
+
+				form.addEventListener('submit', function (e) {
+		            e.preventDefault();
+
+		        });
+			}
+			else{
+				alert("Invalid Username or Password");
+
+				document.getElementById("name").style.border="1px solid red";
+				document.getElementById("pass").style.border="1px solid red";
+
+				form.addEventListener('submit', function (e) {
+		            e.preventDefault();
+
+		        });
+			}
+
+		}
+
+
+		function eyeCheck(){
+			var p = document.getElementById("pass");
+			
+			if(p.type == "password"){
+				p.type = "text";
+				
+				document.getElementById("togglePassword").className="bi-eye";
+			}
+			else{
+				p.type = "password";
+				
+				document.getElementById("togglePassword").className="bi-eye-slash";
+			}
+
+		}
+
+        	  
+
+
+
+	</script>
+
+
+
+</body>
+</html>

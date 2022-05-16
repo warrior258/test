@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Welcome</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="uid">
+			<p>UID - 20BSC1085</p>
+	</div>
+
+	<header>
+		<h1><a href="#">Courx</a></h1>
+				
+			<div class="navbar">
+					
+				<ul>
+					<li><a href="#">HOME</a></li>
+					<li><a href="#">ABOUT</a></li>
+					<li><a href="#course">COURSES</a></li>
+				</ul>
+			</div>
+
+			<div class="head-btn">
+				<a href="#" id="u-name" style="border:none"></a>
+				<a href="index.html">LOG OUT</a>
+				<a href="index-copy.html">GO BACK</a>
+			</div>
+
+	</header>
+
+
+	<div class="yourCourse">
+		
+		<div class="container" style="display:block; padding:100px 100px;">
+			<h1 style="padding-left: 20px; color:#66fcf1;">Your Course</h1>
+			<div class="c-box">
+				<h3 id="head"></h3>
+				<p id="para">You have successfully enrolled<br>in this course.</p>
+
+				<a href="certificate.html" target="_blank">Get Certificate</a>				
+			</div>
+		</div>
+	</div>
+
+
+
+	<div class="footer">
+		
+		<div class="foot1">	
+			<h4>ABOUT</h4>		
+			<ul>
+				<li>News</li>
+				<li>Business</li>
+				<li>Careers</li>
+			</ul>
+		</div>
+
+		
+		<div class="foot1">
+			<h4>CONNECT</h4>			
+			<ul>
+				<li>Contact Us</li>
+				<li>Help Center</li>
+				<li>Media Kit</li>
+			</ul>
+		</div>
+
+		
+		<div class="foot1">	
+			<h4>LEGAL</h4>		
+			<ul>
+				<li>Privacy Policy</li>
+				<li>Accessibility</li>
+				<li>Terms & Conditions</li>
+			</ul>
+		</div>
+
+		<div class="foot1">
+			<h4>DOWNLOAD NOW</h4>
+			<img src="download.svg" width="130px" style="padding-top: 10px; padding-left: 30px;">
+			<!---->
+		</div>		
+
+	</div>
+
+	<div class="copyright">
+		<p>&#169; Copyright reserved 2022</p>
+	</div>
+
+
+
+
+	<script>
+		var name = localStorage.getItem("Username");
+		document.getElementById("u-name").innerHTML="Hello, "+name;
+
+		var course = localStorage.getItem("Choice");
+
+		document.getElementById("head").innerHTML=course;		
+
+		
+	</script>
+
+</body>
+</html>

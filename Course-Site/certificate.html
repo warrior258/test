@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Certificate</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+
+	<div class="certificate" id="Certificate">
+			<h1>Certificate of Completion</h1>
+			<p><i>This is to certify that</i></p>
+			<h2 id="user"></h2>
+			<p><i>has successfully completed the course.</i></p>
+			<h2 id="course"></h2>
+			<p><i>Dated</i></p>
+			<label id="para">></label>
+	</div>
+	
+	<div class="head-btn" style="margin-top: 30px; text-align: center;">
+		<a href="#" id="download" onclick="downloadPdf()">Download Pdf</a>
+	</div>
+
+
+	<script>
+		var name = localStorage.getItem("Username");
+		var course = localStorage.getItem("Choice"); 
+		document.getElementById("user").innerHTML=name;
+		document.getElementById("course").innerHTML=course;
+		document.getElementById("para").innerHTML=Date();
+
+		function downloadPdf() {
+			document.getElementById("download");
+			var cert = document.getElementById("Certificate");
+			
+			/*var opt = {
+			    margin: 1,
+			    filename: 'Certificate.pdf',
+			    image:{type: 'jpeg', quality: 0.98 },
+			    html2canvas:{scale:2},
+			    jsPDF:{unit: 'in', format: 'letter', orientation: 'landscape'}
+			};*/
+
+
+			var opt = {
+			    filename: 'Certificate.pdf',
+			    image:{type: 'jpeg', quality: 1 },
+			    jsPDF:{orientation: 'landscape', format:'a4'},
+			    
+			};
+
+			//This html2pdf() is html2pdf function whose script i linked in head part
+			html2pdf().from(cert).set(opt).save();
+
+			console.log(html2pdf());
+
+			//html2pdf().from(cert).save();
+		}
+		
+
+	</script>
+
+
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>COURSES</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+	<div class="uid">
+			<p>UID - 20BSC1085</p>
+	</div>
+
+	<header>
+		<h1><a href="#">Courx</a></h1>
+				
+			<div class="navbar">
+					
+				<ul>
+					<li><a href="#">HOME</a></li>
+					<li><a href="#">ABOUT</a></li>
+					<li><a href="#course">COURSES</a></li>
+				</ul>
+			</div>
+
+			<div class="head-btn">
+				<a href="#" id="u-name" style="border:none;"></a>
+				<a href="index.html">LOG OUT</a>
+			</div>
+
+	</header>
+
+	<div class="main" style="height: 300px;">
+		<h1 style="padding-top:80px;">COURSES</h1>
+	</div>
+
+
+	<div class="course" id="course" style="padding-top:50px;">
+		<div class="container">
+			<div class="c-box">
+				<h3>Artificial Inteligence</h3>
+				<p>In this course you will learn<br>about AI</p>
+				<a href="selectedCourse.html" id="Artificial Inteligence" onclick="enrol(this)">Enroll Now</a>
+			</div>
+
+			<div class="c-box">
+				<h3>Full Stack Web Dev</h3>
+				<p>In this course you will learn about<br>WEB-DEV</p>
+				<a href="selectedCourse.html" id="Full Stack Web Dev" onclick="enrol(this)">Enroll Now</a>
+			</div>
+
+			<div class="c-box">
+				<h3>Machine Leaning</h3>
+				<p>In this course you will learn about<br>ML</p>
+				<a href="selectedCourse.html" id="Machine Leaning" onclick="enrol(this)">Enroll Now</a>
+			</div>
+
+			<div class="c-box">
+				<h3>Data Analytics</h3>
+				<p>In this course you will learn about<br>Data Analytics</p>
+				<a href="selectedCourse.html" id="Data Analytics" onclick="enrol(this)">Enroll Now</a>
+			</div>
+			<div class="c-box">
+				<h3>Data Scientist</h3>
+				<p>In this course you will learn about<br>Data Scientist</p>
+				<a href="selectedCourse.html" id="Data Scientist" onclick="enrol(this)">Enroll Now</a>
+			</div>
+
+			<div class="c-box">
+				<h3>UI-UX Designer</h3>
+				<p>In this course you will learn about<br>UI-UX</p>
+				<a href="selectedCourse.html" id="UI-UX Designer" onclick="enrol(this)">Enroll Now</a>
+			</div>
+
+		</div>
+	</div>
+
+	<div class="footer">
+		
+		<div class="foot1">	
+			<h4>ABOUT</h4>		
+			<ul>
+				<li>News</li>
+				<li>Business</li>
+				<li>Careers</li>
+			</ul>
+		</div>
+
+		
+		<div class="foot1">
+			<h4>CONNECT</h4>			
+			<ul>
+				<li>Contact Us</li>
+				<li>Help Center</li>
+				<li>Media Kit</li>
+			</ul>
+		</div>
+
+		
+		<div class="foot1">	
+			<h4>LEGAL</h4>		
+			<ul>
+				<li>Privacy Policy</li>
+				<li>Accessibility</li>
+				<li>Terms & Conditions</li>
+			</ul>
+		</div>
+
+		<div class="foot1">
+			<h4>DOWNLOAD NOW</h4>
+			<img src="download.svg" width="130px" style="padding-top: 10px; padding-left: 30px;">
+			<!---->
+		</div>		
+
+	</div>
+
+	<div class="copyright">
+		<p>2022 &#169; Copyright reserved 2022</p>
+	</div>
+
+
+
+	<script>
+
+		var name = localStorage.getItem("Username");
+		document.getElementById("u-name").innerHTML="Hello, "+name;
+		function enrol(choice){
+			localStorage.setItem("Choice",choice.id);
+		}
+	</script>
+
+</body>
+</html>
